@@ -246,7 +246,7 @@ automation:
           usercode: >-
             {{ range(1000, 9999) | random }}
 # Front Door Deadbolt.  You must put in the zwave node id's here 
-          node_id: 104
+          node_id: 5
           code_slot: >-
             {% set object_id = trigger.to_state.object_id %}
             {% set code_slot = object_id[7:-19] %}
@@ -260,7 +260,7 @@ automation:
 #      - service: lock.clear_usercode
 #        data_template:
 ## Front Door Deadbolt.  You must put in the zwave node id's here         
-#          node_id: 104
+#          node_id: 5
 #          code_slot: >-
 #            {% set object_id = trigger.to_state.object_id %}
 #            {% set code_slot = object_id[7:-19] %}
@@ -471,7 +471,7 @@ automation:
       - service: zwave.set_config_parameter
         data_template:
 # Front Door Deadbolt.  You must put in the zwave node id's here 
-          node_id: 104
+          node_id: 5
             
           parameter: >-
             {% if trigger.entity_id == 'input_select.lock_zwave_option_3_front' %}
